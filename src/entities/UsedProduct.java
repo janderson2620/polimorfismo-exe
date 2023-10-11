@@ -4,22 +4,22 @@ import java.time.LocalDate;
 
 public class UsedProduct extends Product{
 
-	private String manufactureDate;
+	private LocalDate manufactureDate;
 	
 	public UsedProduct() {
 	}
 	
-	public UsedProduct(String name, double price, String manufactureDate) {
+	public UsedProduct(String name, double price, LocalDate manufactureDate) {
 		super(name, price);
 		this.manufactureDate = manufactureDate;
 	}
 
 
-	public String getManufactureDate() {
+	public LocalDate getManufactureDate() {
 		return manufactureDate;
 	}
 
-	public void setManufactureDate(String manufactureDate) {
+	public void setManufactureDate(LocalDate manufactureDate) {
 		this.manufactureDate = manufactureDate;
 	}
 

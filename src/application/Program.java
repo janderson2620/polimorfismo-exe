@@ -1,5 +1,7 @@
 package application;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -40,8 +42,8 @@ public class Program {
 			else if (ch == 'u') {
 				System.out.print("Manufacture date (DD/MM/YYYY): ");
 				sc.nextLine();
-				String manufactureDate = sc.nextLine();
-				list.add(new UsedProduct(name, price, manufactureDate));
+				LocalDate date = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+				list.add(new UsedProduct(name, price, date));
 			}
 			else {
 				list.add(new Product(name, price));
